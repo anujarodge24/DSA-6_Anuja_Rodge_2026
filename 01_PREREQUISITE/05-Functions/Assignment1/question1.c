@@ -3,7 +3,6 @@
 #include<stdio.h>
 #include<stdlib.h>
 
-//function declaration
 int arraySum(int* arr, int size);
 
 int main(void)
