@@ -109,27 +109,6 @@ int create_list(struct node* p_list)
     return (SUCCESS);
 }
 
-int remove_end(struct node* p_list)
-{
-    if(p_list->next == NULL)
-    {
-        printf("\nList Empty");
-        exit (EMPTY_LIST);
-    }
-    
-    struct node* run = p_list->next;
-
-    while(run->next->next != NULL)
-    {
-        run = run->next;
-    }
-
-    free(run->next);
-    run->next = NULL;
-
-    return (SUCCESS);
-}
-
 void show_list(struct node* p_list, const char* msg)
 {
     struct node* run = NULL;
