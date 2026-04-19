@@ -111,8 +111,8 @@ int remove_head(struct node* p_list)
 {
     if(p_list == NULL)
     {
-        printf("Dummy node not created!");
-        exit (EXIT_FAILURE);
+        printf("\nList not created!");
+        exit (EMPTY_LIST);
     }
 
 
@@ -137,8 +137,8 @@ void show_list(struct node* p_list, const char* msg)
 {
     if(p_list == NULL)
     {
-        printf("Dummy node not created!");
-        exit (EXIT_FAILURE);
+        printf("\nList not created!");
+        exit (EMPTY_LIST);
     }
 
     struct node* run = NULL;
@@ -163,9 +163,10 @@ int destroy_list(struct node* p_list)
 {
     if(p_list == NULL)
     {
-        printf("Dummy node not created!");
-        exit (EXIT_FAILURE);
+        printf("\nList not created!");
+        exit (EMPTY_LIST);
     }
+
 
     struct node* run = NULL;
     struct node* run_next = NULL;
