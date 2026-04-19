@@ -75,6 +75,12 @@ struct node* create_node(void)
 
 int create_list(struct node* p_list)
 {
+    if(p_list == NULL)
+    {
+        printf("\nDummy node not created!");
+        exit (EXIT_FAILURE);
+    }
+
     struct node* new_node = NULL , *prev_node = NULL;
     int choice = 0;
 
@@ -112,6 +118,12 @@ int create_list(struct node* p_list)
 
 int remove_data(struct node* p_list, int key)
 {
+    if(p_list == NULL)
+    {
+        printf("\nList not created!");
+        exit (EMPTY_LIST);
+    }
+
     struct node* run = NULL;
     struct node* run_prev = NULL;
 
@@ -146,6 +158,12 @@ int remove_data(struct node* p_list, int key)
 
 void show_list(struct node* p_list, const char* msg)
 {
+    if(p_list == NULL)
+    {
+        printf("\nList not created!");
+        exit (EMPTY_LIST);
+    }
+
     struct node* run = NULL;
 
     if(msg != NULL)
@@ -166,6 +184,11 @@ void show_list(struct node* p_list, const char* msg)
 
 int destroy_list(struct node* p_list)
 {
+    if(p_list == NULL)
+    {
+        exit (EMPTY_LIST);
+    }
+
     struct node* run = NULL;
     struct node* run_next = NULL;
 
