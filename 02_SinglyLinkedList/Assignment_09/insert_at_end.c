@@ -122,6 +122,12 @@ int insert_end(struct node* p_list, int new_data)
     new_node = (struct node*)malloc(sizeof(struct node));
     if(new_node == NULL)
     {
+        printf("\nMemory allocation failed!");
+        exit (EXIT_FAILURE);
+    }
+
+    if(new_node == NULL)
+    {
         puts("Out of memory");
         exit (SUCCESS);
     }
@@ -131,7 +137,7 @@ int insert_end(struct node* p_list, int new_data)
 
     
     run = p_list->next;
-    while(run->next != NULL)
+    while(run->next != NULL || run != NULL)
     {
         run = run->next;
     }
