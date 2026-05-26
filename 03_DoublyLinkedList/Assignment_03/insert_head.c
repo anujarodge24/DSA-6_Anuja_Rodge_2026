@@ -103,12 +103,7 @@ void create_list(struct node* p_list)
 
 void insert_head(struct node* p_list, int data) 
 {
-    if(p_list == NULL)
-    {
-        printf("Dummy node not created");
-        return;
-    }
-
+    
     struct node* new_node = NULL;
     new_node = (struct node*)malloc(sizeof(struct node));
     if(new_node == NULL)
